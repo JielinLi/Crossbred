@@ -635,7 +635,7 @@ for(rr in 1){
       run_DMU(
         phe_col_names=c("Id","mean","Trait1","Trait2"),
         target_trait_name=list(c("Trait1"),c("Trait2")),                                
-        fixed_effect_name=NULL,     #固定效应名称
+        fixed_effect_name=NULL,     #鹿脤露篓脨搂脫娄脙没鲁脝
         random_effect_name=list(c("Id"),c("Id")),       
         covariate_effect_name=NULL,                             
         genetic_effect_name="Id",	                  
