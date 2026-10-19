@@ -65,7 +65,7 @@ dSd     <- rep(0.312,nTraits)     ##sa of dominance degree for each QTL
 for (ibreed in 1:nBreeds) {
   domMatrix[(2*(ibreed-1)+1):(2*ibreed),(2*(ibreed-1)+1):(2*ibreed)] <- domList[[ibreed]]
 }
-##¼ÆËã´¿ÖÖÓýÖÖÖµ
+##è®¡ç®—çº¯ç§è‚²ç§å€¼
 
 
 ebv1=cbind(a$ID,a$sex,a$GEBV)
@@ -74,19 +74,19 @@ ebv2=cbind(c$ID,c$sex,c$GEBV)
 ## parents of purebreed and crossbreed from breed1
 ibreed=1
 Males1 <- subset(ebv1,ebv1[,2]==1)
-Sires1 <- Males1[order(Males1[,3], decreasing = T),1 ][1:NSires[ibreed]] ##breed1´¿ÖÖ
-c1sires <- Males1[order(Males1[,3], decreasing = T),1 ][1:(NSires[ibreed]+NSiresc[ibreed])]##ÔÓÖÖÖÐbreed1¸¸±¾,¼ÙÉè20¸ö
+Sires1 <- Males1[order(Males1[,3], decreasing = T),1 ][1:NSires[ibreed]] ##breed1çº¯ç§
+c1sires <- Males1[order(Males1[,3], decreasing = T),1 ][1:(NSires[ibreed]+NSiresc[ibreed])]##æ‚ç§ä¸­breed1çˆ¶æœ¬,å‡è®¾20ä¸ª
 Dams1 <- subset(ebv1,ebv1[,2]==2)
 females1 <- Dams1[order(Dams1[,3], decreasing = T), 1][1:NDams[ibreed]]
-c2dams <- Dams1[order(Dams1[,3], decreasing = T), 1][1:(NDams[ibreed]+NDamsc[ibreed+1])]##ÔÓÖÖÖÐbreed1Ä¸±¾,¼ÙÉè40¸ö
+c2dams <- Dams1[order(Dams1[,3], decreasing = T), 1][1:(NDams[ibreed]+NDamsc[ibreed+1])]##æ‚ç§ä¸­breed1æ¯æœ¬,å‡è®¾40ä¸ª
 ## parents of purebreed and crossbreed from breed2
 ibreed=2
 Males2 <- subset(ebv2,ebv2[,2]==1)
-Sires2 <- Males2[order(Males2[,3], decreasing = T),1 ][1:NSires[ibreed]] ##breed2´¿ÖÖ
-c2sires2 <- Males2[order(Males2[,3], decreasing = T),1 ][1:(NSires[ibreed]+NSiresc[ibreed])]##ÔÓÖÖÖÐbreed2¸¸±¾,¼ÙÉè20¸ö
+Sires2 <- Males2[order(Males2[,3], decreasing = T),1 ][1:NSires[ibreed]] ##breed2çº¯ç§
+c2sires2 <- Males2[order(Males2[,3], decreasing = T),1 ][1:(NSires[ibreed]+NSiresc[ibreed])]##æ‚ç§ä¸­breed2çˆ¶æœ¬,å‡è®¾20ä¸ª
 Dams2 <- subset(ebv2,ebv2[,2]==2)
 females2 <- Dams2[order(Dams2[,3], decreasing = T), 1][1:NDams[ibreed]]
-c1dams2 <- Dams2[order(Dams2[,3], decreasing = T), 1][1:(NDams[ibreed]+NDamsc[ibreed-1])]##ÔÓÖÖÖÐbreed2Ä¸±¾,¼ÙÉè40¸ö
+c1dams2 <- Dams2[order(Dams2[,3], decreasing = T), 1][1:(NDams[ibreed]+NDamsc[ibreed-1])]##æ‚ç§ä¸­breed2æ¯æœ¬,å‡è®¾40ä¸ª
 ## parents of purebreed and crossbreed from breed3
 
 
